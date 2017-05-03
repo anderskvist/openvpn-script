@@ -25,7 +25,7 @@ case ${1} in
 	cat <<EOF > ${HOME}/.local/share/applications/${NAME}.desktop
 [Desktop Entry]
 Encoding=UTF-8
-Name=${NAME}
+Name=OpenVPN to ${NAME}
 Comment=VPN Connection for ${NAME}
 Exec=${HOME}/bin/openvpn.sh ${NAME}
 Icon=${HOME}/.local/share/applications/openvpn.png
