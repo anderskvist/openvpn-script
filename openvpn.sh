@@ -15,10 +15,9 @@ case ${1} in
 	    fi
 	    echo "${!VARIABLE}"|sed 's/dhcp-option DOMAIN/search/'|sed 's/dhcp-option DNS/nameserver/'|sed 's/dhcp-option NTP.*//'
 	    I=$((${I}+1))
-	done | resolvconf -a ${DEV}
+	done
 	;;
     stop)
-	resolvconf -d ${DEV}
 	;;
     install)
 	NAME=${2}
